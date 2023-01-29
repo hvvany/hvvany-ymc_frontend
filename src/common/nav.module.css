@@ -1,0 +1,48 @@
+.navbox {
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -5px 14px 0 rgba(68, 68, 68, 0.123);
+}
+/*
+.navbox input {
+    display: none;
+} */
+
+.navbox div {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+}
+/* a > .checked {
+  color: red;
+} */
+.navbox a i {
+  font-size: 25px;
+}
+
+.navbox a input:checked + i {
+  opacity: 50%;
+}
+
+.navhome {
+  width: 50px;
+}
+
+/* .nav-item {
+  background-color: red;
+} */
+
+/* .nav-item .checked {
+  color: white !important;
+}
+
+.active {
+  color: red;
+} */
