@@ -1,12 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import LoginPage from "./login/login_form";
-import "bootstrap/dist/css/bootstrap.min.css";
+import WelcomePage from "./welcome/welcome_form";
+import { LoginPage } from "./login/login_form";
+import { SignupPage } from "./signup/signup_form";
+import NavBtn from "./common/nav";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <LoginPage name="로그인" check="회원가입" />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<WelcomePage name="로그인" check="회원가입" />}
+        ></Route>
+        <Route
+          path="/login"
+          element={<LoginPage name="로그인" check="회원가입" />}
+        ></Route>
+        <Route path="/signup" element={<SignupPage />}></Route>
+        <Route path="/main" element={<NavBtn />}></Route>
+        <Route path="/community" element={<NavBtn />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

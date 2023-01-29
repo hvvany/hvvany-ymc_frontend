@@ -1,12 +1,10 @@
-.login_form {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.welcome_form {
+  width: 280px;
+  height: 654px;
+  position: relative;
 }
 
-.login_form_img {
+.welcome_form_img {
   width: 200px;
   position: absolute;
   top: 20vh;
@@ -14,26 +12,23 @@
   transform: translateX(-50%);
 }
 
-.inputBtn {
-  padding-left: 12px;
-  font-size: 13px;
-  height: 42px;
+.pillBtn {
+  height: 52px;
   width: 200px;
   border-radius: 30px;
-  border: rgb(188, 188, 188) solid 1px;
+  border: #d34b4b solid 2px;
   background-color: white;
-  color: rgb(50, 50, 50);
-  font-weight: 500;
-  margin-bottom: 15px;
+  color: #d34b4b;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.pillBtn {
+.pillBtn2 {
   background-color: #d34b4b;
   color: white;
   height: 52px;
-  width: 250px;
+  width: 200px;
   border-radius: 30px;
-  margin-top: 1.5rem;
   border: none;
   font-weight: bold;
 }

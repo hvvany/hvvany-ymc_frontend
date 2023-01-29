@@ -1,4 +1,4 @@
-import style from "../login/login.module.css";
+import style from "../welcome/welcome.module.css";
 
 function TagTypesExample(prob) {
   return <button className={style.pillBtn}>{prob.name}</button>;
