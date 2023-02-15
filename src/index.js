@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import WelcomePage from "./welcome/welcome_form";
-import { LoginPage } from "./login/login_form";
+// import { LoginPage } from "./login/login_form";
+import { LoginPage } from "./login/login_test";
 import { SignupPage } from "./signup/signup_form";
 import { MainPage } from "./main/main";
 import NavBtn from "./common/nav";
