@@ -1,16 +1,40 @@
 import style from "./nav.module.css";
 import "./nav.module.css";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const NavBtn = () => {
+const NavBtn = ({ basicPos }) => {
+  console.log(basicPos);
   // 현재 선택된 아이콘을 관리하는 state
-  const [activeNav, setActiveNav] = useState(1);
+  const [activeNav, setActiveNav] = useState(
+    basicPos
+      ? // 위치가 home 이면 0 이활성화
+        basicPos === "home"
+        ? 1
+        : // 위치가 news 면 1이 활성화
+        basicPos === "news"
+        ? 2
+        : // 위치가 커뮤니티 면 2가 활성화
+        basicPos === "community"
+        ? 3
+        : // 위치가 미션이면 3이 활성화
+        basicPos === "mission"
+        ? 4
+        : // 위치가 랭킹이면 4가 활성화
+        basicPos === "ranking"
+        ? 5
+        : ""
+      : ""
+  );
+  function onClickhandle(e) {
+    setActiveNav(e.target.id);
+    console.log(activeNav);
+  }
   return (
     <nav className={style.navbox}>
       {/* 하단 네비게이션 최상위 태그 */}
       <div>
-        <Link to="/main" onClick={() => setActiveNav(1)}>
+        <Link to="/main">
           <div className={activeNav === 1 ? "nav-item checked" : "nav-item"}>
             <i className="bi bi-house-door-fill"></i>
           </div>
@@ -19,26 +43,24 @@ const NavBtn = () => {
         </Link>
       </div>
       <div>
-        <Link to="/" onClick={() => setActiveNav(2)}>
-          <div className={activeNav === 2 ? "nav-item checked" : "nav-item"}>
+        <Link to="/">
+          <div onClick={onClickhandle} className={activeNav === 2 ? "nav-item checked" : "nav-item"}>
             <i className="bi bi-geo-alt-fill"></i>
           </div>
-
           {/* 네비게이션을 구성하고 있는 하나의 버튼 */}
         </Link>
       </div>
       <div>
-        <Link to="/community" onClick={() => setActiveNav(3)}>
-          <div className={activeNav === 3 ? "nav-item checked" : "nav-item"}>
+        <Link to="/community">
+          <div onClick={onClickhandle} className={activeNav === 3 ? "nav-item checked" : "nav-item"}>
             <i className="bi bi-people-fill"></i>
           </div>
-
           {/* 네비게이션을 구성하고 있는 하나의 버튼 */}
         </Link>
       </div>
       <div>
-        <Link to="/main" onClick={() => setActiveNav(4)}>
-          <div className={activeNav === 4 ? "nav-item checked" : "nav-item"}>
+        <Link to="/main">
+          <div onClick={onClickhandle} className={activeNav === 4 ? "nav-item checked" : "nav-item"}>
             <i className="bi bi-chat-dots-fill"></i>
           </div>
 
@@ -46,11 +68,10 @@ const NavBtn = () => {
         </Link>
       </div>
       <div>
-        <Link to="/main" onClick={() => setActiveNav(5)}>
-          <div className={activeNav === 5 ? "nav-item checked" : "nav-item"}>
+        <Link to="/main">
+          <div onClick={onClickhandle} className={activeNav === 5 ? "nav-item checked" : "nav-item"}>
             <i className="bi bi-list"></i>
           </div>
-
           {/* 네비게이션을 구성하고 있는 하나의 버튼 */}
         </Link>
       </div>

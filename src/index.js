@@ -10,6 +10,7 @@ import NavBtn from "./common/nav";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CommunityPage from "./community/community"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,7 +28,7 @@ root.render(
         <Route path="/signup" element={<SignupPage />}></Route>
         {/* <Route path="/main" element={<NavBtn />}></Route> */}
         <Route path="/main" element={<MainPage />}></Route>
-        <Route path="/community" element={<NavBtn />}></Route>
+        <Route path="/community" element={<CommunityPage />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
