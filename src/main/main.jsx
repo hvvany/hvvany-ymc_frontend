@@ -39,6 +39,11 @@ function MainPage() {
       <h2>인기 매점</h2>
       <SimpleSlider className={style.store} stores={storeList} />
       <h2>뉴스 기사</h2>
+      <SimpleSlider
+        className={style.news}
+        stores={storeList}
+        dotscheck={true}
+      />
       {/* <SimpleSlider /> */}
       <NavBtn basicPos={"home"} />
     </div>

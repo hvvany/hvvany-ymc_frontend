@@ -3,3 +3,8 @@
     opacity: 0;
     display: none;
   }
+
+.card {
+  height: 4rem;
+  border: solid 1px black;
+}

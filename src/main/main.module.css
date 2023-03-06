@@ -1,8 +1,13 @@
-
-
+.store {
+  color: red;
+}
 
 .slick-prev::before,
-  .slick-next::before {
-    opacity: 0;
-    display: none;
-  }
+.slick-next::before {
+  opacity: 0;
+  display: none;
+}
+
+.main_page {
+  overflow: hidden;
+}
