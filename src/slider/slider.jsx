@@ -20,12 +20,17 @@ export default class SimpleSlider extends Component {
           <>
           <Slider {...settings}>
             {stores.map((data, idx) => {
+              const storeImage = data.store_image[0].image
               const name = data.name;
               const items = data.items;
+              // const img = data.
               return (
                   <div className={style.card}>
-                    <span>{name}</span>
-                    <span>{items ? items : "없다"}</span>
+                    <div>
+                      <span>{name}</span>
+                      <span>{items ? items : "없다"}</span>
+                    </div>
+                    <img src={storeImage} alt="" width="200px"/>
                   </div>
               );
             })}
